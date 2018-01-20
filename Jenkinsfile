@@ -1,4 +1,4 @@
-node('php'){
+node('PHP'){
     stage('Clean'){
         deleteDir()
         sh 'ls -la'
@@ -15,10 +15,10 @@ node('php'){
     stage('config') {
         parallel(
             'config cache': {
-                echo 'tarefa paralela'
+                echo 'tarefa paralela1'
             },
             'config route': {
-                echo 'tarefa paralela'
+                echo 'tarefa paralela2'
             }
         )
     }
